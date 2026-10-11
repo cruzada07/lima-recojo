@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimaRecojo</title>
+    <link rel="icon" href="assets/img/logo1.png" type="image/png">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="app-header">
+        <!-- Aquí agregamos el logo visible en la página -->
+        <img src="assets/img/logo1.png" alt="Logo LimaRecojo" class="app-logo">
+        <h1>LimaRecojo</h1>
+        <p>¡Que no te deje el camión!</p>
+    </header>
+
+    <main class="app-container">
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+
+        <aside class="controls-section">
+            <h2>Configurar Alerta</h2>
+            
+            <div class="control-group">
+                <label for="alert-distance">Avisarme cuando el camión esté a:</label>
+                <select id="alert-distance">
+                    <option value="500">500 metros (aprox. 5 minutos)</option>
+                    <option value="200">200 metros (aprox. 2 minutos)</option>
+                    <option value="100">100 metros (aprox. 1 minuto)</option>
+                    <option value="50">50 metros (aprox. 30 segundos)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="alert-audio">Sonido de notificación:</label>
+                <select id="alert-audio">
+                    <option value="municipal">Melodía Municipal (Clásica)</option>
+                    <option value="cumbia">Cumbia Peruana</option>
+                    <option value="regueton">Reguetón Peruano</option>
+                    <option value="custom">Personalizado (Subir archivo)...</option>
+                </select>
+            </div>
+
+            <div class="control-group" id="custom-audio-container" style="display: none;">
+                <label for="custom-audio-file">Selecciona tu audio:</label>
+                <input type="file" id="custom-audio-file" accept="audio/*">
+            </div>
+
+            <button id="btn-activate-alert" class="btn-primary">Activar Alerta</button>
+            <p id="status-message" class="status"></p>
+        </aside>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    
+    <script src="js/audioManager.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/alertManager.js"></script>
+    <script src="js/socketClient.js"></script>
+</body>
+</html>
