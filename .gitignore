@@ -36,7 +36,7 @@ out/
 .next/
 .nuxt/
 
-# Cobertura de pruebas (Testing)
+# Cobertura de pruebas
 coverage/
 .nyc_output/
 .clover/
@@ -55,7 +55,7 @@ coverage/
 *.swp
 *.swo
 
-# Archivos del sistema operativo
+# Archivos del SO
 .DS_Store
 .DS_Store?
 ._*
