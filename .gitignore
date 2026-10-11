@@ -1,0 +1,71 @@
+# ===========================
+# Archivos ignorados por Git
+# ===========================
+
+# Dependencias de Node.js
+node_modules/
+jspm_packages/
+
+# Variables de entorno y secretos (¡NUNCA subir a GitHub!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# Archivos de registro / Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Archivos temporales y de usuario (subidas o pruebas locales)
+uploads/
+temp/
+tmp/
+*.tmp
+
+# Construcción y producción
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# Cobertura de pruebas (Testing)
+coverage/
+.nyc_output/
+.clover/
+
+# Configuración e historial de editores de código (IDE)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Caché de paquetes
+.npm
+.eslintcache
+.stylelintcache
