@@ -1,0 +1,165 @@
+/* ==========================================
+   LimaRecojo - Estilos Base y Layout
+   ========================================== */
+
+:root {
+    --primary-color: #2e7d32; /* Verde ecológico */
+    --primary-dark: #1b5e20;
+    --background-color: #f4f7f6;
+    --surface-color: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --border-radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden; /* Evita scroll innecesario en toda la página */
+}
+
+/* ==========================================
+   Cabecera (Header)
+   ========================================== */
+.app-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.app-logo {
+    max-width: 60px; /* ¡Esto soluciona el problema del logo gigante! */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.app-header p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   Contenedor Principal y Mapa
+   ========================================== */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.map-section {
+    flex-grow: 1; /* El mapa toma todo el espacio sobrante disponible */
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* ==========================================
+   Panel de Controles (Abajo)
+   ========================================== */
+.controls-section {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+    z-index: 10;
+    max-height: 50vh; /* Ocupa máximo la mitad de la pantalla */
+    overflow-y: auto;
+}
+
+.controls-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--primary-dark);
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+.control-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+select, input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: var(--primary-color);
+}
+
+/* ==========================================
+   Botones y Alertas
+   ========================================== */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.status {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+.status.success {
+    color: var(--primary-dark);
+}
+
+.status.error {
+    color: #d32f2f;
+}
